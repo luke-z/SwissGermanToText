@@ -38,6 +38,9 @@ def wav2mfcc(file_path, max_len=11):
 def save_data_to_array(path=DATA_PATH, max_len=11):
     labels, _, _ = get_labels(path)
 
+    if not os.path.exists("./arrays/"):
+        os.makedirs("./arrays/")
+
     for label in labels:
         # Init mfcc vectors
         mfcc_vectors = []
