@@ -1,4 +1,4 @@
-![Deep Learning](https://github.com/luke-z/SwissGermanToText/blob/master/img/header.jpg)
+![Deep Learning](https://github.com/luke-z/SwissGermanToText/blob/master/resources/img/header.jpg)
 
 <h1 align="center">SwissGermanToText</h1>
 
@@ -65,7 +65,7 @@ All audio samples are recorded with 44.1kHz
 
 ## Installation
 
-Download [Anaconda w/ Python 3.7](https://www.anaconda.com/download/) and import the yaml file in the folder anacondaEnv.
+Download [Anaconda w/ Python 3.7](https://www.anaconda.com/download/) and import the [yaml file](https://github.com/luke-z/SwissGermanToText/tree/master/resources/anacondaEnv) in the folder anacondaEnv.
 
 ## Usage
 
@@ -80,14 +80,16 @@ Run jupyter from the corresponding Anaconda environment and open the jupyter not
 
 These are the important packages we are using:
 
-| Package     |
-| ----------  |
-| librosa     |
-| sklearn     |
-| keras       |
-| numpy       |
-| os          |
-| matplotlib  |
+| Package    |
+| -----------|
+| librosa    |
+| sklearn    |
+| keras      |
+| numpy      |
+| os         |
+| matplotlib |
+
+The rest can be found in the exported environment file
 
 ## Sources
 #### Speech recognition part:
