@@ -16,6 +16,7 @@ Parameters:
 
 ```python
 feature_dim_1 = 20
+feature_dim_2 = 11
 channel = 1
 epochs = 50
 batch_size = 100
