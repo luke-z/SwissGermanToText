@@ -4,10 +4,8 @@
 
 This is a school project in which we make a deep learning application able to translate spoken Swiss German to text.
 
-<p align="center">
-<h4>Team:</h4>
-<br>Lukas Zbinden | Olivier Gafner | Katrin Horn</br>
-</p>
+<h4 align="center">Team:</h4>
+<p align="center">Lukas Zbinden | Olivier Gafner | Katrin Horn</p>
 
 ## Baseline information
 
