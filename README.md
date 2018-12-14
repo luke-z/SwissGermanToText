@@ -45,6 +45,24 @@ model = Sequential()
 
 The baseline model can be found [here](https://github.com/luke-z/SwissGermanToText/tree/master/models)
 
+#### Amount of audio samples:
+All audio samples are recorded with 44.1kHz
+
+|Text  |Amount |
+|------|:-----:|
+|1     |296    |
+|2     |301    |
+|3     |338    |
+|4     |277    |
+|5     |241    |
+|6     |213    |
+|7     |215    |
+|8     |230    |
+|9     |233    |
+|10    |236    |
+|11    |262    |
+|12    |231    |
+
 ## Installation
 
 Download [Anaconda w/ Python 3.7](https://www.anaconda.com/download/) and import the yaml file in the folder anacondaEnv.
