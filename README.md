@@ -48,20 +48,20 @@ The baseline model can be found [here](https://github.com/luke-z/SwissGermanToTe
 #### Amount of audio samples:
 All audio samples are recorded with 44.1kHz
 
-|Text  |Amount |
-|------|:-----:|
-|1     |296    |
-|2     |301    |
-|3     |338    |
-|4     |277    |
-|5     |241    |
-|6     |213    |
-|7     |215    |
-|8     |230    |
-|9     |233    |
-|10    |236    |
-|11    |262    |
-|12    |231    |
+|Text  |Amount Baseline | Amount After Improvement II |
+|------|:--------------:|:---------------------------:|
+|1     |296             |330                          |
+|2     |301             |335                          |
+|3     |338             |370                          |
+|4     |277             |307                          |
+|5     |241             |272                          |
+|6     |213             |242                          |
+|7     |215             |249                          |
+|8     |230             |261                          |
+|9     |233             |264                          |
+|10    |236             |267                          |
+|11    |262             |294                          |
+|12    |231             |266                          |
 
 ## Improvement I
 
@@ -70,13 +70,13 @@ For the first improvement we tried a few separate things:
 - **Increasing the feature_dim_2 variable:** \
  this led to a higher accuracy on the test set, but dramatically decreased the number recognition on new data.
 - **Increase the amount of epochs:** \
- If we went over ~40 epochs, there was no more improvement to the accuracy. It might even have decreased the accuracy on 
+ When we went over ~40 epochs, there was no more improvement to the accuracy. It might even have decreased the accuracy on 
  never seen before data due to overfitting.
 - **Changing the batch size:** \
  By decreasing the batch size we achieved a higher accuracy on never seen before data. The only downside is the extremely 
  high amount of time it takes until the model is trained.
 
-*At the end of improvement I we were on an accuracy of about 0.92. The recognition on new data was about 90% aswell.*
+*At the end of Improvement I we were on an accuracy of about 0.92. The recognition on new data was about 90% aswell.*
 
 ## Improvement II
 
@@ -91,13 +91,20 @@ The second improvement involved changes to the dataset & layers:
  performed pretty well by increasing our accuracy. Afterwards, there was no more visible improvement. 
   * Increasing the dropout by a factor of two on the first dropout instance decreased the accuracy dramatically.
 
-*At the end of improvement II the accuracy dropped to about 0.88 for the test set. The recognition on new data dropped to about 50%*
+*At the end of Improvement II the accuracy dropped to about 0.88 for the test set. The recognition on new data dropped to about 50%*
+
+## Learnings
+
+- By recording and preparing all the samples ourselves, we realized what kind of effort it takes to create useful data for machine learning.
+- There is a huge amount of data samples needed, particularly with the deep learning approach.
+- It is very hard to tweak the right hyperparameter, especially when you cannot see under the hood as experienced in this project.
+- A small deviation from test data in regard to the previously used training data can already have a huge impact on how accurate the prediction is.
 
 ## Installation
 
 Download [Anaconda w/ Python 3.7](https://www.anaconda.com/download/) and import the [yaml file](https://github.com/luke-z/SwissGermanToText/tree/master/resources/anacondaEnv) in the folder anacondaEnv.
 
-## Usage
+## Local Usage
 
 Run jupyter from the corresponding Anaconda environment and open the jupyter notebook
 
@@ -105,6 +112,12 @@ Run jupyter from the corresponding Anaconda environment and open the jupyter not
 - Save vectors of labels to array
 - Create the model
 - Predict on the model
+
+## Colab Usage
+
+1. Open the [Google Colab Notebook](https://colab.research.google.com/drive/1G6XVTkENH5_0OCO945xyd88YCoaGc-Hl).
+2. Click on "playground mode" to start using the notebook.
+3. Clone the git repo and start trying out things.
 
 ## Important packages
 
