@@ -63,6 +63,36 @@ All audio samples are recorded with 44.1kHz
 |11    |262    |
 |12    |231    |
 
+## Improvement I
+
+For the first improvement we tried a few separate things:
+
+- **Increasing the feature_dim_2 variable:** \
+ this led to a higher accuracy on the test set, but dramatically decreased the number recognition on new data.
+- **Increase the amount of epochs:** \
+ If we went over ~40 epochs, there was no more improvement to the accuracy. It might even have decreased the accuracy on 
+ never seen before data due to overfitting.
+- **Changing the batch size:** \
+ By decreasing the batch size we achieved a higher accuracy on never seen before data. The only downside is the extremely 
+ high amount of time it takes until the model is trained.
+
+*At the end of improvement I we were on an accuracy of about 0.92. The recognition on new data was about 90% aswell.*
+
+## Improvement II
+
+The second improvement involved changes to the dataset & layers:
+
+- **We added new data to our dataset**: 
+  * We added additional male audio samples, which increased the recognition of unseen data a little bit. 
+  * By adding female voice samples for each number, we had a new obstacle since the amount of that kind of data is pretty 
+ low compared to male voices.
+- **Changes to the layers:** 
+  * By adding a GaussianNoise layer we tried to add some noise to our data set. Before adding the new audio samples, it 
+ performed pretty well by increasing our accuracy. Afterwards, there was no more visible improvement. 
+  * Increasing the dropout by a factor of two on the first dropout instance decreased the accuracy dramatically.
+
+*At the end of improvement II the accuracy dropped to about 0.88 for the test set. The recognition on new data dropped to about 50%*
+
 ## Installation
 
 Download [Anaconda w/ Python 3.7](https://www.anaconda.com/download/) and import the [yaml file](https://github.com/luke-z/SwissGermanToText/tree/master/resources/anacondaEnv) in the folder anacondaEnv.
